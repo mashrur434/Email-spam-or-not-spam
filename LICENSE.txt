@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 amrrs
+Copyright 2025 mashrur(taken help from youtube)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
