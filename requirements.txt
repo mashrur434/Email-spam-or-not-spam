@@ -1,5 +1,7 @@
 streamlit
 nltk
-sklearn
-opencv-python-headless
-Pillow
+scikit-learn
+pandas
+numpy
+
+
