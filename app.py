@@ -4,21 +4,15 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-import nltk
 
-nltk.download('stopwords')
-nltk.download('punkt')
+# Ensure required NLTK data is available (downloads once)
+nltk_data = ['stopwords', 'punkt']
+for data in nltk_data:
+    try:
+        nltk.data.find(f'tokenizers/{data}')
+    except LookupError:
+        nltk.download(data)
 
-# ✅ Automatically download required NLTK resources if missing
-try:
-    stopwords.words('english')
-except LookupError:
-    nltk.download('stopwords')
-
-try:
-    nltk.word_tokenize("test")
-except LookupError:
-    nltk.download('punkt')
 
 ps = PorterStemmer()
 
@@ -68,3 +62,4 @@ if st.button('Predict'):
         st.header("🚨 Spam")
     else:
         st.header("✅ Not Spam")
+
